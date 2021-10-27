@@ -1,6 +1,10 @@
 import re
-from sorts import swap
 import cards
+
+def swap(a_list, a, b):
+    temp = a_list[a]
+    a_list[a] = a_list[b]
+    a_list[b] = temp
 
 def hand_score(hand):
     score = 0 #initializing the score

@@ -34,7 +34,6 @@ def make_card(rank, suit):
     return card_tuple
 
 def make_deck(make_card):
-    random.seed(1)
     card_deck = [] #creating an empty list
     suit_list = ["Clubs", "Diamonds", "Hearts", "Spades"] #creating a list of suit 
 
@@ -46,7 +45,6 @@ def make_deck(make_card):
     return card_deck
 
 def shuffle(deck):
-    random.seed(1)
     for index in range(len(deck)):
         j = random.randint(index, len(deck) - 1) #assigning j a random index in the list 
         temp = deck[index] #swapping 1st step
@@ -56,7 +54,6 @@ def shuffle(deck):
     return deck #returning shuffled deck
 
 def draw(deck, hand = []):
-    random.seed(1) 
     if len(deck) == 0: #if deck is empty, returns none
         return None
     else:
@@ -67,7 +64,6 @@ def draw(deck, hand = []):
     return hand
 
 def deal(deck, number_of_cards):
-    random.seed(1)
     hand_1 = [] #initializing an empty list
     hand_2 = [] #initializing an empty list
 
