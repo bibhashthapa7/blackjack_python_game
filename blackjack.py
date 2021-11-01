@@ -51,7 +51,8 @@ def print_hand_and_score(name, hand):
                 swap(hand, index, index - 1) #swaps
                 index -= 1 #decrements index
         
-    for i in range(len(hand)): #iterating through each element in list of hand
+    sorted_list = [i for i in hand] #using list comprehension
+    for i in range(len(sorted_list)): #iterating through each element in list of hand
         print(hand[i]," ", end="") #prints the cards in ascending order of rank 
 
     total_score = hand_score(hand) #calling the hand_score function
@@ -102,7 +103,7 @@ def player_hit_or_stand():
         return False
 
 if __name__ == "__main__":
-    player_name = input("Emter your name: ")
+    player_name = input("Enter your name: ")
     dealer_name = "Dealer"
 
     deck = cards.make_deck(cards.make_card)
