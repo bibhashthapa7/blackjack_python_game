@@ -1,2 +1,2 @@
 # Blackjack-Python
-A fully functional Blackjack card game made in Python
+A Blackjack card game made in Python
